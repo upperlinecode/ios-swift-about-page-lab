@@ -1,5 +1,5 @@
-##About Page Lab
-####Xcode Layout
+## About Page Lab
+#### Xcode Layout
 - So far we have done all of our coding in the Xcode playground, but that's not where iPhone or iPad apps actually get written. Let's take a look at this folder in Xcode.
 So far, we've only used the Xcode playground. When we create a new Xcode project, it creates a skeleton of an application for us, which consists of several different folders and files. Let's take a look at the new layout.
 - Editor Area
@@ -34,7 +34,7 @@ So far, we've only used the Xcode playground. When we create a new Xcode project
 </p>
 
 
-####Model View Controller Design Pattern
+#### Model View Controller Design Pattern
 Applications like Facebook, Airbnb, or Spotify use what is called a Model-View-Controller (MVC) design pattern. We will talk more about this later this week, but it's extremely important to know so we're going to go over it many times. The MVC design pattern is all about organizing your code by its purpose. The three sections are as follows.
 - Model
   - This holds your data and it is where you write code that allows you to manipulate that data. For spotify, its models hold the songs' information and user data. For Facebook, the models hold all of the status updates, profile pictures, and other user information.
@@ -45,7 +45,7 @@ Applications like Facebook, Airbnb, or Spotify use what is called a Model-View-C
   - The views need to access the models' data, and this communication is handled by the controllers.
   - The file where we will be writing our controller code is ViewController.swift
 
-####Adding our data to the project
+#### Adding our data to the project
 - This is going to be a one-page application that displays some facts about a user, like a simple profile page. In order to add your data to the page, you'll need to start by going to the About.swift file.
 - You should see this:
 ```Swift
@@ -61,7 +61,7 @@ struct About {
   -  store a paragraph about yourself in a string constant called bio.
   -  make an array of your top three favorite movies in a constant called favoriteMovies.
 
-####Connecting our model to our controller
+#### Connecting our model to our controller
 - Click on the ViewController.swift file.
 - There is a lot going on here, but it's not as complicated as it looks. A lot of this code gets written for us by Xcode. For now, we're just going to look at this statement (line 18)
 ```Swift
@@ -74,7 +74,7 @@ Name.text = "Name: \(about.name)"
 ```
 - We are interpolating the name constant from the about struct into a string that will be displayed in our views.
 
-####Connecting our controller to our view
+#### Connecting our controller to our view
 - But where does Name.text come from? Well at the top of ViewController.swift, look at this statement:
 ```Swift
 @IBOutlet weak var Name: UILabel!
@@ -87,7 +87,7 @@ Name.text = "Name: \(about.name)"
   <img src="https://github.com/upperlinecode/intro-to-swift/blob/master/day-1/images/about-page-final.png" height="400px" hspace="20">
 </p>
 
-####Bonus Items
+#### Bonus Items
 - Look up how to change the background color or the size of text
 - If you have an iPhone, you can actually put this onto your phone right now. See if you can look up how to do this.
 - Play around with it! What is it missing? Add your own touch to it. You can always download the code again, so it really doesn't matter if you break anything.
